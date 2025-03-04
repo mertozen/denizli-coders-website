@@ -1,4 +1,3 @@
-//import rooster_codes from './assests/rooster_codes.webp'
 interface MenuProps {
   image: any;
   description1: string;
@@ -20,9 +19,11 @@ const Menu: React.FC<MenuProps> = ({image, description1, description2, button1})
                     {description2}
                   </h2>
                 </div>
-                <button className="overflow-hidden px-14 mt-14 max-w-full text-xl font-bold bg-blue-700 rounded-3xl h-[59px] leading-[60px] text-zinc-100 w-[241px] max-md:px-5 max-md:mt-10">
+                <a href="#more">
+                <button className="overflow-hidden px-14 mt-14 max-w-full text-xl font-bold bg-blue-700 rounded-3xl h-[59px] leading-[30px] text-zinc-100 w-[241px] max-md:px-5 max-md:mt-10">
                    {button1}
                 </button>
+                </a>
               </div>
             </article>
             
