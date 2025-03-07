@@ -1,4 +1,10 @@
+import React from "react";
+import MissionAndEducationCards from "./components/MissionAndEducationCards";
+import ProjectCard from "./components/ProjectCard";
+import OurTeam from "./components/OurTeam";
+
 import "./App.css";
+<<<<<<< HEAD
 import Navbar from "./components/Navbar";
 import Menu from "./components/Menu";
 import Events from "./components/Events";
@@ -50,7 +56,17 @@ function App() {
         tg_url={telegram_link}
       />
     </>
+=======
+
+const App: React.FC = () => {
+  return (
+    <div className="container space-y-16 py-16 bg-background flex flex-col items-center">
+      <MissionAndEducationCards />
+      <ProjectCard />
+      <OurTeam />
+    </div>
+>>>>>>> 39e65e6 (Changes saved)
   );
-}
+};
 
 export default App;
