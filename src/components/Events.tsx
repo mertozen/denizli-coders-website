@@ -37,7 +37,7 @@ const Events: React.FC<EventsProps> = ({ event_title, images }) => {
           <img
             key={index}
             src={image}
-            alt={`Etkinlik ${index + 1}`}
+            alt={`Event ${index + 1}`}
             onClick={() => handleImageClick(image)}
             className="w-60 h-60 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-110 cursor-pointer"
           />
@@ -45,11 +45,11 @@ const Events: React.FC<EventsProps> = ({ event_title, images }) => {
       </div>
       {selectedImage && (
         <div className="fixed inset-0 bg-opacity-80 flex justify-center items-center backdrop-blur-md">
-          <div className="bg-white p-10 rounded-lg shadow-lg relative w-100 flex items-center">
+          <div className="bg-white p-10 rounded-lg shadow-lg relative  w-[70vw] max-w-[700px] flex justify-center">
             <button
-              className="absolute left-4 text-gray-600 hover:text-gray-900 text-4xl transition-transform duration-300 transform hover:scale-110"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-900 text-4xl transition-transform duration-300 transform hover:scale-110"
               onClick={handlePrevious}
-              aria-label="Önceki Resim"
+              aria-label="Previous Image "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,12 +69,12 @@ const Events: React.FC<EventsProps> = ({ event_title, images }) => {
             <img
               src={selectedImage}
               alt="Selected Images"
-              className="w-80 h-80 object-cover rounded-md transition-transform duration-300 transform scale-105"
+              className="w-[550px] h-[550px] object-cover rounded-lg transition-transform duration-300 transform scale-110"
             />
             <button
-              className="absolute right-4 text-gray-600 hover:text-gray-900 text-4xl transition-transform duration-300 transform hover:scale-110"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-900 text-4xl transition-transform duration-300 transform hover:scale-110"
               onClick={handleNext}
-              aria-label="Sonraki Resim"
+              aria-label="Next Image"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
