@@ -14,7 +14,6 @@ import datingevent from "./assets/datingevent.jpg";
 import docker101 from "./assets/docker101.jpg";
 import meet from "./assets/meet.jpg";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 
 
