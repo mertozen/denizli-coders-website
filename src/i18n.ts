@@ -18,8 +18,10 @@ i18n.use(initReactI18next).init({
                 "Şimdi Katıl!": "Join Now",
                 "Kabul Et": "Accept",
                 "Reddet": "Reject",
-                "İçeriği kişiselleştirmek, reklamları daha uygun hale getirmek ve etkileşimi ölçmek amacıyla çerezler ve benzeri teknolojiler kullanıyoruz. 'Kabul Et' butonuna tıklayarak, Çerez Politikamızda belirtilen şartları kabul etmiş olursunuz. Daha iyi bir deneyim için bize katılın!":"We use cookies and similar technologies to personalize content, make ads more relevant, and measure engagement. By clicking the 'Accept' button, you agree to the terms outlined in our Cookie Policy. Join us for a better experience!" 
+                "İçeriği kişiselleştirmek, reklamları daha uygun hale getirmek ve etkileşimi ölçmek amacıyla çerezler ve benzeri teknolojiler kullanıyoruz. 'Kabul Et' butonuna tıklayarak, Çerez Politikamızda belirtilen şartları kabul etmiş olursunuz. Daha iyi bir deneyim için bize katılın!":"We use cookies and similar technologies to personalize content, make ads more relevant, and measure engagement. By clicking the 'Accept' button, you agree to the terms outlined in our Cookie Policy. Join us for a better experience!",
+                "Etkinliklerimiz": "Our Events",
             }
+
 
         },
     }
