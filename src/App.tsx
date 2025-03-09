@@ -67,7 +67,7 @@ function App() {
     
       <Card title={""} />
       <Events
-        event_title={t("Our Event")}
+        event_title={t("Etkinliklerimiz")}
         images={[datingevent, docker101, meet]}
       />
       <Footer
