@@ -1,44 +1,108 @@
 #root {
   max-width: 1500px;
   margin: 0 auto;
-  padding: rem;
   text-align: center;
 }
 
-/*.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Genel Sayfa Stili */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Ana Konteyner */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* Kart Stili */
 .card {
-  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 100%;
 }
 
-.read-the-docs {
-  color: #888;
+/* Kart İçeriği */
+.card-content {
+  flex: 1;
+  padding: 10px;
 }
 
-*/
+.card-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Kart Görseli */
+.card-image {
+  flex-shrink: 0;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.card-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Projeler Kartı */
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.project-card .text {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.project-card img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .card,
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-image,
+  .project-card img {
+    width: 100%;
+  }
+
+  .project-card .text {
+    width: 100%;
+    padding: 0;
+  }
+}

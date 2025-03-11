@@ -1,9 +1,11 @@
-import "./App.css";
+import React from "react";
 import Navbar from "./components/Navbar";
 import Menu from "./components/Menu";
 import Events from "./components/Events";
 import Footer from "./components/Footer";
-import Card from "./components/Card";
+import MissionAndEducationCards from "./components/MissionAndEducationCards";
+import ProjectCard from "./components/ProjectCard";
+import OurTeam from "./components/OurTeam";
 import rooster_codes from "./assets/rooster_codes.webp";
 import denizli_coders_logo from "./assets/denizlicoders1-removebg.png";
 import instagram_icon from "./assets/instagram_icon.webp";
@@ -12,11 +14,13 @@ import telegram_icon from "./assets/telegram_icon.webp";
 import datingevent from "./assets/datingevent.jpg";
 import docker101 from "./assets/docker101.jpg";
 import meet from "./assets/meet.jpg";
-function App() {
+
+const App: React.FC = () => {
   const telegram_link = "https://t.me/denizlicoders";
   const instagram_link = "https://www.instagram.com/denizlicoders/";
+
   return (
-    <>
+    <div className="container space-y-16 py-16 bg-background flex flex-col items-center">
       <Navbar
         logo={denizli_coders_logo}
         about_tag={"Hakkımızda"}
@@ -31,7 +35,9 @@ function App() {
         sub_header={"Kodla, geliş, fark yarat!"}
         learn_more_button={"Daha Fazla Öğren!"}
       />
-      <Card title={""} />
+      <MissionAndEducationCards />
+      <ProjectCard />
+      <OurTeam />
       <Events
         event_title={"Our Event"}
         images={[datingevent, docker101, meet]}
@@ -49,8 +55,8 @@ function App() {
         telegram_icon={telegram_icon}
         tg_url={telegram_link}
       />
-    </>
+    </div>
   );
-}
+};
 
 export default App;
