@@ -30,69 +30,45 @@ const Events: React.FC<EventsProps> = ({ event_title, images }) => {
   };
 
   return (
-    <section className="text-center p-6">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">{event_title}</h2>
-      <div className="flex justify-center gap-20">
+    <section className="text-center p-4 sm:p-6">
+      <h2 className="text-xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 text-left sm:text-center">
+        {event_title}
+      </h2>
+      <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-20">
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
             alt={`Event ${index + 1}`}
             onClick={() => handleImageClick(image)}
-            className="w-60 h-60 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-110 cursor-pointer"
+            className="w-32 sm:w-60 h-32 sm:h-60 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-110 cursor-pointer"
           />
         ))}
       </div>
       {selectedImage && (
-        <div className="fixed inset-0 bg-opacity-80 flex justify-center items-center backdrop-blur-md">
-          <div className="bg-white p-10 rounded-lg shadow-lg relative  w-[70vw] max-w-[700px] flex justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center backdrop-blur-md p-4">
+          <div className="bg-white p-4 sm:p-10 rounded-lg shadow-lg relative w-[90vw] sm:w-[70vw] max-w-[320px] sm:max-w-[700px] flex flex-col items-center">
             <button
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-900 text-4xl transition-transform duration-300 transform hover:scale-110"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-900 text-xl sm:text-4xl"
               onClick={handlePrevious}
-              aria-label="Previous Image "
+              aria-label="Previous Image"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
+              &#8592;
             </button>
             <img
               src={selectedImage}
-              alt="Selected Images"
-              className="w-[550px] h-[550px] object-cover rounded-lg transition-transform duration-300 transform scale-110"
+              alt="Selected Image"
+              className="w-[250px] sm:w-[550px] h-[250px] sm:h-[550px] object-cover rounded-lg"
             />
             <button
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-900 text-4xl transition-transform duration-300 transform hover:scale-110"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-900 text-xl sm:text-4xl"
               onClick={handleNext}
               aria-label="Next Image"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              &#8594;
             </button>
             <button
-              className="absolute top-1 right-2 text-gray-600 hover:text-gray-900 text-3xl"
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-xl sm:text-3xl"
               onClick={() => {
                 setSelectedImage(null);
                 setCurrentIndex(0);

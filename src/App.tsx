@@ -19,31 +19,35 @@ function App() {
   const instagram_link = "https://www.instagram.com/denizlicoders/";
   return (
     <>
-      <div>
+      <div className="fixed bottom-0 w-full">
         <CookieConsent
           location="bottom"
           buttonText="Kabul Et"
           declineButtonText="Reddet"
           enableDeclineButton
           cookieName="moverCookieConsent"
-          style={{ background: "#0000cd", color: "#fff" }}
+          expires={150}
+          containerClasses="!bg-blue-700 !text-white !p-2 md:!p-2 flex flex-col md:flex-row items-center justify-between"
+          buttonClasses="!bg-blue-900 !text-white !px-4 !py-2 !rounded-md !text-sm md:!text-base hover:!bg-blue-800 transition"
+          declineButtonClasses="!bg-white !text-blue-900 !px-4 !py-2 !rounded-md !text-sm md:!text-base hover:!bg-gray-200 transition"
+          style={{ backgroundColor: "#0000cd", color: "#fff" }}
           buttonStyle={{
-            background: "#000080",
+            backgroundColor: "#000080",
             color: "#fff",
             fontSize: "14px",
           }}
           declineButtonStyle={{
-            background: "#fff",
+            backgroundColor: "#fff",
             color: "#000080",
             fontSize: "14px",
           }}
-          expires={150}
         >
-          İçeriği kişiselleştirmek, reklamları daha uygun hale getirmek ve
-          etkileşimi ölçmek amacıyla çerezler ve benzeri teknolojiler
-          kullanıyoruz. 'Kabul Et' butonuna tıklayarak, Çerez Politikamızda
-          belirtilen şartları kabul etmiş olursunuz. Daha iyi bir deneyim için
-          bize katılın!
+          <p className="text-current ">
+            İçeriği kişiselleştirmek, reklamları daha uygun hale getirmek ve
+            etkileşimi ölçmek amacıyla çerezler ve benzeri teknolojiler
+            kullanıyoruz. 'Kabul Et' butonuna tıklayarak, Çerez Politikamızda
+            belirtilen şartları kabul etmiş olursunuz.
+          </p>
         </CookieConsent>
       </div>
 
