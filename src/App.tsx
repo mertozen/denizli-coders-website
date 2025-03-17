@@ -15,17 +15,14 @@ import docker101 from "./assets/docker101.jpg";
 import meet from "./assets/meet.jpg";
 import { useTranslation } from "react-i18next";
 
-
-
 function App() {
   const telegram_link = "https://t.me/denizlicoders";
   const instagram_link = "https://www.instagram.com/denizlicoders/";
-  const linkedin_link = "https://www.linkedin.com/company/denizli-coders/"
-  const {t} = useTranslation()
+  const linkedin_link = "https://www.linkedin.com/company/denizli-coders/";
+  const { t } = useTranslation();
   return (
     <>
-    
-    <div>
+      <div>
         <CookieConsent
           location="bottom"
           buttonText={t("Kabul Et")}
@@ -35,21 +32,27 @@ function App() {
           style={{ background: "#0000cd", color: "#fff" }}
           buttonStyle={{
             background: "#000080",
+
             color: "#fff",
+
             fontSize: "14px",
           }}
           declineButtonStyle={{
             background: "#fff",
+
             color: "#000080",
+
             fontSize: "14px",
           }}
           expires={150}
         >
-          {t("İçeriği kişiselleştirmek, reklamları daha uygun hale getirmek ve etkileşimi ölçmek amacıyla çerezler ve benzeri teknolojiler kullanıyoruz. 'Kabul Et' butonuna tıklayarak, Çerez Politikamızda belirtilen şartları kabul etmiş olursunuz. Daha iyi bir deneyim için bize katılın!")}
+          {t(
+            "İçeriği kişiselleştirmek, reklamları daha uygun hale getirmek ve etkileşimi ölçmek amacıyla çerezler ve benzeri teknolojiler kullanıyoruz. 'Kabul Et' butonuna tıklayarak, Çerez Politikamızda belirtilen şartları kabul etmiş olursunuz. Daha iyi bir deneyim için bize katılın!"
+          )}
         </CookieConsent>
       </div>
 
-      <Navbar 
+      <Navbar
         logo={denizli_coders_logo}
         about_tag={t("Hakkımızda")}
         events_tag={t("Etkinlikler")}
@@ -57,13 +60,13 @@ function App() {
         join_button={t("Bize Katıl!")}
         tg_url={telegram_link}
       />
-      <Menu 
+      <Menu
         rooster_coding_image={rooster_codes}
         main_header={t("Denizlinin kod tutkunları burada buluşuyor!")}
         sub_header={t("Kodla, geliş, fark yarat!")}
         learn_more_button={t("Daha Fazla Öğren!")}
       />
-    
+
       <Card title={""} />
       <Events
         event_title={t("Etkinliklerimiz")}
@@ -82,7 +85,6 @@ function App() {
         telegram_icon={telegram_icon}
         tg_url={telegram_link}
       />
-   
     </>
   );
 }
