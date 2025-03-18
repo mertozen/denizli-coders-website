@@ -18,6 +18,7 @@ import { useTranslation } from "react-i18next";
 function App() {
   const telegram_link = "https://t.me/denizlicoders";
   const instagram_link = "https://www.instagram.com/denizlicoders/";
+
   const linkedin_link = "https://www.linkedin.com/company/denizli-coders/"
   const {t} = useTranslation()
 
@@ -72,6 +73,7 @@ function App() {
   ];
   
 
+
   return (
     <>
     <div>
@@ -84,17 +86,23 @@ function App() {
           style={{ background: "#0000cd", color: "#fff" }}
           buttonStyle={{
             background: "#000080",
+
             color: "#fff",
+
             fontSize: "14px",
           }}
           declineButtonStyle={{
             background: "#fff",
+
             color: "#000080",
+
             fontSize: "14px",
           }}
           expires={150}
         >
+
           {t("İçeriği kişiselleştirmek, reklamları daha uygun hale getirmek ve etkileşimi ölçmek amacıyla çerezler ve benzeri teknolojiler kullanıyoruz. 'Kabul Et' butonuna tıklayarak, Çerez Politikamızda belirtilen şartları kabul etmiş olursunuz. Daha iyi bir deneyim için bize katılın!")}
+
         </CookieConsent>
       </div>
 
@@ -109,6 +117,7 @@ function App() {
       <div id="home">
       <Menu 
         rooster_coding_image={rooster_codes}
+
         main_header={t("Denizli'nin kod tutkunları burada buluşuyor!")}
         sub_header={t("Kodla, geliş, fark yarat!")}
         learn_more_button={t("Daha Fazla Öğren!")}
@@ -133,6 +142,7 @@ function App() {
 
       <div id="events">
      <Events
+
         event_title={t("Etkinliklerimiz")}
         images={[datingevent, docker101, meet]}
       />
