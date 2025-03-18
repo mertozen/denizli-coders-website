@@ -7,34 +7,36 @@ interface MenuProps {
 const Menu: React.FC<MenuProps> = ({rooster_coding_image , main_header, sub_header, learn_more_button}) => {
   return (
 
-<section className="self-end mt-24 w-full max-w-[1316px] max-md:mt-10 max-md:mr-2.5 max-md:max-w-full ml-5">
-  <div className="flex justify-center gap-5 max-md:flex-col">
-    <article className="w-[39%] max-md:ml-0 max-md:w-full">
-      <div className="self-stretch my-auto tracking-wider max-md:mt-10 max-md:max-w-full">
-        <div className="flex flex-col pl-4 font-medium max-md:max-w-full">
-          <h1 className="text-5xl leading-[66px] text-slate-900 max-md:max-w-full max-md:text-4xl max-md:leading-[59px]">
+<section className="flex flex-col items-center justify-center w-full max-w-[1316px] mx-auto mt-24 max-md:mt-10 px-5">
+  <div className="flex items-center justify-center gap-10 w-full max-md:flex-col">
+  
+    <article className="w-1/2 max-md:w-full text-center md:text-left">
+      <div className="tracking-wider">
+        <div className="flex flex-col font-medium">
+          <h1 className="text-5xl leading-tight text-slate-900 max-md:text-4xl">
             {main_header}
           </h1>
-          <h2 className="text-2xl leading-[66px]">
+          <h2 className="text-2xl leading-tight mt-2">
             {sub_header}
           </h2>
         </div>
 
         <a href="#more">
-          <button className="overflow-hidden px-14 mt-14 max-w-full text-xl font-bold bg-blue-700 rounded-3xl h-[59px] leading-[30px] text-zinc-100 w-[241px] max-md:px-5 max-md:mt-10">
+          <button className="px-10 py-3 mt-8 text-xl font-bold bg-blue-700 rounded-3xl text-white">
             {learn_more_button}
           </button>
         </a>
       </div>
     </article>
     
-    <div className="ml-5 w-[40%] max-md:ml-0 max-md:w-full">
+    <div className="w-1/2 max-md:w-full flex justify-center">
       <img
         src={rooster_coding_image}
         alt="Hero illustration"
-        className="object-contain w-full aspect-square max-md:mt-10 max-md:max-w-full"
+        className="object-contain w-full max-w-md"
       />
     </div>
+
   </div>
 </section>
 

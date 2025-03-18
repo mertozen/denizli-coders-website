@@ -15,16 +15,65 @@ import docker101 from "./assets/docker101.jpg";
 import meet from "./assets/meet.jpg";
 import { useTranslation } from "react-i18next";
 
-
-
 function App() {
   const telegram_link = "https://t.me/denizlicoders";
   const instagram_link = "https://www.instagram.com/denizlicoders/";
   const linkedin_link = "https://www.linkedin.com/company/denizli-coders/"
   const {t} = useTranslation()
+
+  const cardData = [
+    {
+      title: "Vizyon ve Misyonumuz",
+      paragraphs: [
+        {
+          heading: "Vizyonumuz",
+          content:
+            "Denizli’yi yazılım ve teknoloji alanında öncü bir merkeze dönüştürmek.",
+        },
+        {
+          heading: "Misyonumuz",
+          content:
+            "Yazılım tutkunlarını bir araya getirerek bilgi paylaşımını artırmak, etkinlikler ve eğitimlerle yerel yetenekleri geliştirmek.",
+        },
+      ],
+      image: denizli_coders_logo,
+    },
+    {
+      title: "Eğitimler",
+      paragraphs: [
+        {
+          heading: "Denizli Coders Eğitimleri",
+          content:
+            "Alanında uzman eğitmenler ve konuklarla, yazılım dünyasında öne çıkan mimari ve teknolojileri öğrenin! Teorik bilgiyi pratik uygulamalarla birleştirerek kariyerinizi ileri taşıyın.",
+        },
+      ],
+      image: denizli_coders_logo,
+    },
+    {
+      title: "Projeler",
+      paragraphs: [
+        {
+          content:
+            "Üyelerimizi projelere dahil ederek teknik destek ve gerçek iş deneyimi sunuyoruz.",
+        },
+      ],
+      image: denizli_coders_logo,
+    },
+    {
+      title: "Our Team",
+      paragraphs: [
+        {
+          heading: "dasdadadsdasadssada",
+          content: "sdffggsdgfweadadsdaa",
+        },
+      ],
+      image: denizli_coders_logo, 
+    },
+  ];
+  
+
   return (
     <>
-    
     <div>
         <CookieConsent
           location="bottom"
@@ -57,18 +106,38 @@ function App() {
         join_button={t("Bize Katıl!")}
         tg_url={telegram_link}
       />
+      <div id="home">
       <Menu 
         rooster_coding_image={rooster_codes}
-        main_header={t("Denizlinin kod tutkunları burada buluşuyor!")}
+        main_header={t("Denizli'nin kod tutkunları burada buluşuyor!")}
         sub_header={t("Kodla, geliş, fark yarat!")}
         learn_more_button={t("Daha Fazla Öğren!")}
       />
+      </div>
+
     
-      <Card title={""} />
-      <Events
+
+      <div id="about">
+      <main className="flex flex-col items-center space-y-32 py-32 px-4">
+      {cardData.map((item, index) => (
+        <Card
+          key={index}
+          title={item.title}
+          paragraphs={item.paragraphs}
+          image={item.image}
+        />
+      ))}
+    </main>
+
+      </div>
+
+      <div id="events">
+     <Events
         event_title={t("Etkinliklerimiz")}
         images={[datingevent, docker101, meet]}
       />
+      </div>
+
       <Footer
         logo={denizli_coders_logo}
         about_tag={t("Hakkımızda")}
