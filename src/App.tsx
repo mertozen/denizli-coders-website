@@ -5,11 +5,11 @@ import Events from "./components/Events";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 import CookieConsent from "react-cookie-consent";
-import rooster_codes from "./assets/rooster_codes.webp";
-import denizli_coders_logo from "./assets/denizlicoders1-removebg.png";
-import instagram_icon from "./assets/instagram_icon.webp";
-import linkedin_icon from "./assets/linkedin_icon.webp";
-import telegram_icon from "./assets/telegram_icon.webp";
+import rooster_codes from "./assets/rooster_codes.png";
+import denizli_coders_logo from "./assets/denizlicoders-removebg.png";
+import instagram_icon from "./assets/instagram_icon.png";
+import linkedin_icon from "./assets/linkedin_icon.png";
+import telegram_icon from "./assets/telegram_icon.png";
 import datingevent from "./assets/datingevent.jpg";
 import docker101 from "./assets/docker101.jpg";
 import meet from "./assets/meet.jpg";
@@ -60,18 +60,22 @@ function App() {
         join_button={t("Bize Katıl!")}
         tg_url={telegram_link}
       />
+      <div id="navbar">
       <Menu
         rooster_coding_image={rooster_codes}
         main_header={t("Denizlinin kod tutkunları burada buluşuyor!")}
         sub_header={t("Kodla, geliş, fark yarat!")}
-        learn_more_button={t("Daha Fazla Öğren!")}
-      />
+        learn_more_button={t("Daha Fazla Öğren!")}/>
+      </div>
 
       <Card title={""} />
+
+      <div id="events">
       <Events
         event_title={t("Etkinliklerimiz")}
-        images={[datingevent, docker101, meet]}
-      />
+        images={[datingevent, docker101, meet]}/> 
+      </div>
+
       <Footer
         logo={denizli_coders_logo}
         about_tag={t("Hakkımızda")}
@@ -83,8 +87,7 @@ function App() {
         instagram_icon={instagram_icon}
         telegram_url={telegram_link}
         telegram_icon={telegram_icon}
-        tg_url={telegram_link}
-      />
+        tg_url={telegram_link}/>
     </>
   );
 }
