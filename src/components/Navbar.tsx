@@ -10,10 +10,10 @@ interface NavbarProps {
     tg_url: string;
   }
 
-  const Navbar: React.FC<NavbarProps> = ({logo, about_tag,events_tag, team_tag, join_button, tg_url}) => {
+const Navbar: React.FC<NavbarProps> = ({logo, about_tag,events_tag, team_tag, join_button, tg_url}) => {
     const { i18n } = useTranslation();
     const handleLanguageChange = (e: { target: { value: any; }; }) => {
-      const newLang = e.target.value;
+    const newLang = e.target.value;
       i18n.changeLanguage(newLang);
     }
 
@@ -21,7 +21,7 @@ interface NavbarProps {
     <nav className="bg-white fixed w-full z-20 top-0 shadow-md">
     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <div className="flex items-center">
-      <Link to="navbar" smooth={true} duration={500}>
+      <Link to="mainPage" smooth={true} duration={500}>
         <img src={logo} alt="Logo" className="w-[100px] sm:w-[150px] object-contain" />
       </Link>
     </div>
@@ -39,7 +39,7 @@ interface NavbarProps {
     </div>
 
     <div className="flex items-center gap-4">
-      <select value={i18n.language} onChange={handleLanguageChange} className="border border-gray-300 rounded px-2 py-1">
+      <select value={i18n.language} onChange={handleLanguageChange} className="border border-gray-300 rounded px-2 py-1 text-blue-700">
         <option value="tr">TR</option>
         <option value="en">EN</option>
       </select>
@@ -51,6 +51,7 @@ interface NavbarProps {
     </div>
 
     </div>
+
     </nav>
 
     )
