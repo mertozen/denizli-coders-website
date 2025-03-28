@@ -108,6 +108,7 @@ function App() {
         </CookieConsent>
       </div>
 
+      <div id="navbar">
       <Navbar
         logo={denizli_coders_logo}
         about_tag={t("Hakkımızda")}
@@ -116,15 +117,16 @@ function App() {
         join_button={t("Bize Katıl!")}
         tg_url={telegram_link}
       />
-
+      </div>
+      
       <div id="mainPage">
       <Menu
         rooster_coding_image={rooster_codes}
-        main_header={t("Denizlinin kod tutkunları burada buluşuyor!")}
+        main_header={t("Denizli'nin kod tutkunları burada buluşuyor!")}
         sub_header={t("Kodla, geliş, fark yarat!")}
         learn_more_button={t("Daha Fazla Öğren!")}/>
       </div>
-
+      <div id="about">
       <main className="flex flex-col items-center space-y-32 py-32 px-4">
       {cardData.map((item, index) => (
         <Card
@@ -135,7 +137,7 @@ function App() {
         />
       ))}
     </main>
-
+    </div>
 
       <div id="events">
       <Events

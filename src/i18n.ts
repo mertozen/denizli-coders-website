@@ -12,7 +12,7 @@ i18n.use(initReactI18next).init({
                 "Etkinlikler": "Events",
                 "Ekibimiz": "Our Team",
                 "Bize Katıl!": "Join Us!",
-                "Denizlinin kod tutkunları burada buluşuyor!": "Denizli's code enthusiasts gather here!",
+                "Denizli'nin kod tutkunları burada buluşuyor!": "Denizli's code enthusiasts gather here!",
                 "Kodla, geliş, fark yarat!": "Code, improve, make a difference!",
                 "Daha Fazla Öğren!": "Learn More!",
                 "Şimdi Katıl!": "Join Now",
