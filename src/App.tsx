@@ -18,6 +18,7 @@ import denizlicodersImage from "./assets/denizlicoders1.png";
 import educationImage from "./assets/egitimphoto.png";
 import projectImage from "./assets/projephoto.png";
 
+
 function App() {
   const telegram_link = "https://t.me/denizlicoders";
   const instagram_link = "https://www.instagram.com/denizlicoders/";
@@ -26,7 +27,8 @@ function App() {
 
   const cardData = [
     {
-      title: "Vizyon ve Misyonumuz",
+      id: "about",
+      title: t("Vizyon ve Misyonumuz"),
       paragraphs: [
         {
           heading: "Vizyonumuz",
@@ -42,6 +44,7 @@ function App() {
       image: denizlicodersImage,
     },
     {
+      id: "courses",
       title: "Eğitimler",
       paragraphs: [
         {
@@ -53,6 +56,7 @@ function App() {
       image: educationImage,
     },
     {
+      id: "projects",
       title: "Projeler",
       paragraphs: [
         {
@@ -63,6 +67,7 @@ function App() {
       image: projectImage,
     },
     {
+      id: "team",
       title: t("Ekibimiz"),
       paragraphs: [
         {
@@ -77,7 +82,9 @@ function App() {
 
 
   return (
+    
     <>
+    
       <div>
         <CookieConsent
           location="bottom"
@@ -119,25 +126,28 @@ function App() {
       />
       </div>
       
-      <div id="mainPage">
+    
       <Menu
         rooster_coding_image={rooster_codes}
         main_header={t("Denizli'nin kod tutkunları burada buluşuyor!")}
         sub_header={t("Kodla, geliş, fark yarat!")}
         learn_more_button={t("Daha Fazla Öğren!")}/>
-      </div>
-      <div id="about">
+  
+
+      
+      
       <main className="flex flex-col items-center space-y-32 py-32 px-4">
       {cardData.map((item, index) => (
         <Card
           key={index}
+          id={item.id}
           title={item.title}
           paragraphs={item.paragraphs}
           image={item.image}
         />
       ))}
     </main>
-    </div>
+  
 
       <div id="events">
       <Events
@@ -157,7 +167,9 @@ function App() {
         telegram_url={telegram_link}
         telegram_icon={telegram_icon}
         tg_url={telegram_link}/>
+        
     </>
+    
   );
 }
 

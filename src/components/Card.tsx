@@ -2,12 +2,13 @@ interface CardProps {
   title: string;
   paragraphs: { heading?: string; content: string }[];
   image: string;
+  id: string;
 
 }
 
-const Card: React.FC<CardProps> = ({ title, paragraphs, image }) => {
+const Card: React.FC<CardProps> = ({ id, title, paragraphs, image }) => {
   return (
-    <section className="flex flex-row flex-wrap items-center gap-10 w-full max-w-[1161px] mx-auto max-md:flex-col">
+    <section id={id} className="flex flex-row flex-wrap items-center gap-10 w-full max-w-[1161px] mx-auto max-md:flex-col">
       <img
         src={image}
         alt={title}

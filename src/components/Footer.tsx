@@ -16,14 +16,14 @@ const Footer: React.FC<FooterProps> = ({logo, about_tag, team_tag, join_button, 
   return (
   <footer className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1316px] mx-auto px-20 py-5 mt-20 bg-white">
   <div className="flex flex-col md:flex-row items-center gap-6 text-lg font-bold text-blue-700">
-    <Link to="home" smooth={true} duration={500}>
+    <Link to="navbar" smooth={true} duration={500} offset={-128}>
       <img src={logo} alt="Logo" className="w-[100px] object-contain" />
     </Link>
     <div className="flex flex-col md:flex-row items-center gap-6">
-      <Link to="about" smooth={true} duration={500} className="hover:text-blue-500 transition">
+      <Link to="about" smooth={true} duration={500} offset={-210} className="hover:text-blue-500 transition">
         {about_tag}
       </Link>
-      <Link to="about" smooth={true} duration={500} className="hover:text-blue-500 transition">
+      <Link to="team" smooth={true} duration={500} offset={-210} className="hover:text-blue-500 transition">
         {team_tag}
       </Link>
     </div>
