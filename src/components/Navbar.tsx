@@ -23,17 +23,17 @@ const Navbar: React.FC<NavbarProps> = ({logo, about_tag,events_tag, team_tag, jo
     return(
     <header className="flex fixed w-full z-20 top-0 justify-between items-center text-blue-700 py-6 px-8 md:px-32 bg-white drop-shadow-md">
     <div className="flex items-center gap-8">
-    <Link to="navbar" smooth={true} duration={500}>
+    <Link to="navbar" smooth={true} duration={500} offset={-128}>
       <img src={logo} alt="Logo" className="w-[80px] sm:w-[120px] hover:scale-105 transition-all" />
     </Link>
     <ul className="hidden xl:flex gap-8 font-bold text-lg text-blue-700">
-    <Link to="about" smooth={true} duration={500}>
+    <Link to="about" smooth={true} duration={500} offset={-210}>
       <li className="p-3 hover:text-blue-500 rounded-md transition-all cursor-pointer">{about_tag}</li>
     </Link>
-    <Link to="about" smooth={true} duration={500}>
+    <Link to="events" smooth={true} duration={500} offset={-128}>
       <li className="p-3 hover:text-blue-500 rounded-md transition-all cursor-pointer">{events_tag}</li>
     </Link>
-    <Link to="about" smooth={true} duration={500}>
+    <Link to="team" smooth={true} duration={500} offset={-210}>
       <li className="p-3 hover:text-blue-500 rounded-md transition-all cursor-pointer">{team_tag}</li>    
     </Link>
     </ul>
@@ -70,13 +70,13 @@ const Navbar: React.FC<NavbarProps> = ({logo, about_tag,events_tag, team_tag, jo
 
     <div className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}>
-      <Link to="about" smooth={true} duration={500}>
+      <Link to="about" smooth={true} duration={500} offset={-210}>
       <li className="list-none w-full text-center p-4 hover:text-blue-500 transition-all cursor-pointer">{about_tag}</li>
       </Link>
-      <Link to="events" smooth={true} duration={500}>
+      <Link to="events" smooth={true} duration={500} offset={-128}>
       <li className="list-none w-full text-center p-4 hover:text-blue-500 transition-all cursor-pointer">{events_tag}</li>
       </Link>
-      <Link to="about" smooth={true} duration={500}>
+      <Link to="team" smooth={true} duration={500} offset={-210}>
       <li className="list-none w-full text-center p-4 hover:text-blue-500 transition-all cursor-pointer">{team_tag}</li>
       </Link>
       </div>
