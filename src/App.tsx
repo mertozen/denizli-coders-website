@@ -31,37 +31,37 @@ function App() {
       title: t("Vizyon ve Misyonumuz"),
       paragraphs: [
         {
-          heading: "Vizyonumuz",
+          heading: t("Vizyonumuz"),
           content:
-            "Denizli’yi yazılım ve teknoloji alanında öncü bir merkeze dönüştürmek.",
+            t("Denizli’yi yazılım ve teknoloji alanında öncü bir merkeze dönüştürmek."),
         },
         {
-          heading: "Misyonumuz",
+          heading: t("Misyonumuz"),
           content:
-            "Yazılım tutkunlarını bir araya getirerek bilgi paylaşımını artırmak, etkinlikler ve eğitimlerle yerel yetenekleri geliştirmek.",
+            t("Yazılım tutkunlarını bir araya getirerek bilgi paylaşımını artırmak, etkinlikler ve eğitimlerle yerel yetenekleri geliştirmek."),
         },
       ],
       image: denizlicodersImage,
     },
     {
       id: "courses",
-      title: "Eğitimler",
+      title: t("Eğitimler"),
       paragraphs: [
         {
-          heading: "Denizli Coders Eğitimleri",
+          heading: t("Denizli Coders Eğitimleri"),
           content:
-            "Alanında uzman eğitmenler ve konuklarla, yazılım dünyasında öne çıkan mimari ve teknolojileri öğrenin! Teorik bilgiyi pratik uygulamalarla birleştirerek kariyerinizi ileri taşıyın.",
+            t("Alanında uzman eğitmenler ve konuklarla, yazılım dünyasında öne çıkan mimari ve teknolojileri öğrenin! Teorik bilgiyi pratik uygulamalarla birleştirerek kariyerinizi ileri taşıyın."),
         },
       ],
       image: educationImage,
     },
     {
       id: "projects",
-      title: "Projeler",
+      title: t("Projeler"),
       paragraphs: [
         {
           content:
-            "Üyelerimizi projelere dahil ederek teknik destek ve gerçek iş deneyimi sunuyoruz.",
+            t("Üyelerimizi projelere dahil ederek teknik destek ve gerçek iş deneyimi sunuyoruz."),
         },
       ],
       image: projectImage,

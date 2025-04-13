@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 
@@ -19,7 +19,24 @@ const Navbar: React.FC<NavbarProps> = ({logo, about_tag,events_tag, team_tag, jo
     }
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+    const menuRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+          setIsMenuOpen(false);
+        }
+      };
+    
+      if (isMenuOpen) {
+        document.addEventListener("mousedown", handleClickOutside);
+      }
+    
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [isMenuOpen]);
+    
+    
     return(
     <header className="flex fixed w-full z-20 top-0 justify-between items-center text-blue-700 py-6 px-8 md:px-32 bg-white drop-shadow-md">
     <div className="flex items-center gap-8">
@@ -67,8 +84,10 @@ const Navbar: React.FC<NavbarProps> = ({logo, about_tag,events_tag, team_tag, jo
       )}
     </svg>
 
+    
 
-    <div className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+
+    <div ref={menuRef} className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}>
       <Link to="about" smooth={true} duration={500} offset={-210}>
       <li className="list-none w-full text-center p-4 hover:text-blue-500 transition-all cursor-pointer">{about_tag}</li>
