@@ -31,17 +31,17 @@ const Footer: React.FC<FooterProps> = ({logo, about_tag, team_tag, join_button, 
 
   <div className="flex flex-col md:flex-row items-center gap-6 mt-4 md:mt-0">
     <div className="flex gap-4">
-      <a href={linkedin_url}>
+      <a href={linkedin_url} target="_blank">
         <img src={linkedin_icon} alt="LinkedIn" className="w-5" />
       </a>
-      <a href={instagram_url}>
+      <a href={instagram_url} target="_blank">
         <img src={instagram_icon} alt="Instagram" className="w-5" />
       </a>
-      <a href={telegram_url}>
+      <a href={telegram_url} target="_blank">
         <img src={telegram_icon} alt="Telegram" className="w-5" />
       </a>
     </div>
-    <a href={tg_url}>
+    <a href={tg_url} target="_blank">
       <button className="px-6 py-2 text-lg font-medium text-white bg-blue-700 rounded-3xl hover:bg-blue-800 transition">
         {join_button}
       </button>
