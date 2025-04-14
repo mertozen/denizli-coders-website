@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({logo, about_tag,events_tag, team_tag, jo
     
     
     return(
-    <header className="flex fixed w-full z-20 top-0 justify-between items-center text-blue-700 py-6 px-8 md:px-32 bg-white drop-shadow-md">
+    <header className="flex fixed w-full z-20 top-0 justify-between items-center text-white py-6 px-8 md:px-32 bg-white drop-shadow-md">
     <div className="flex items-center gap-8">
     <Link to="navbar" smooth={true} duration={500} offset={-128}>
       <img src={logo} alt="Logo" className="w-[80px] sm:w-[120px] hover:scale-105 transition-all" />
@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({logo, about_tag,events_tag, team_tag, jo
         <option value="tr">TR</option>
         <option value="en">EN</option>
       </select>
-      <a href={tg_url}>
+      <a href={tg_url} target="_blank">
         <button className="px-6 py-1 text-lg font-medium text-white bg-blue-700 rounded-3xl hover:bg-blue-800 transition cursor-pointer">
           {join_button}
         </button>
